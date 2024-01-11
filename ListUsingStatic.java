@@ -1,6 +1,8 @@
 public class ListUsingStatic {
+    // content line 3 is an attribute of instance
     public int content;
-    private ListUsingStatic next;
+    // next line 5 is an attribute of instance
+    private List next;
 
     public ListUsingStatic(int x, ListUsingStatic a) {
         this.content = x;
@@ -28,7 +30,7 @@ public class ListUsingStatic {
             return false;
         return this.next.contains(x);
     }
-    
+
     // Suppression de la première occurrence de x
     static ListUsingStatic supprimer(int x, ListUsingStatic a) {
         if (a == null)

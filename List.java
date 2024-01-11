@@ -1,5 +1,7 @@
 public class List {
+    // content line 3 is an attribute of instance
     public int content;
+    // next line 5 is an attribute of instance
     private List next;
 
     public List(int x, List a) {
