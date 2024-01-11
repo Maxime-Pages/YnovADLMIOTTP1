@@ -2,7 +2,7 @@ public class ListUsingStatic {
     // content line 3 is an attribute of instance
     public int content;
     // next line 5 is an attribute of instance
-    private List next;
+    private ListUsingStatic next;
 
     public ListUsingStatic(int x, ListUsingStatic a) {
         this.content = x;
@@ -48,6 +48,7 @@ public class ListUsingStatic {
         return new ListUsingStatic(a.content, concat(a.next, b));
     }
 
+    // Anonymous function to reverse a list, actual version destroys list's tail
     static ListUsingStatic Anonyme(ListUsingStatic a) {
         ListUsingStatic b = null;
         while (a != null) {

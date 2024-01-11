@@ -49,6 +49,7 @@ public class List {
         return new List(a.content, concat(a.next, b));
     }
 
+    // Anonymous function to reverse a list, actual version destroys list's tail
     static List Anonyme(List a) {
         List b = null;
         while (a != null) {
