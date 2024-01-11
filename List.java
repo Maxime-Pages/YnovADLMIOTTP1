@@ -22,6 +22,14 @@ public class List {
         return false;
     }
 
+    public Boolean contains(int x) {
+        if (this.content == x)
+            return true;
+        if (this.next == null)
+            return false;
+        return this.next.contains(x);
+    }
+
     // Suppression de la première occurrence de x
     static List supprimer(int x, List a) {
         if (a == null)
@@ -50,14 +58,6 @@ public class List {
         return b;
     }
 
-    public Boolean contains(int x) {
-        if (this.content == x)
-            return true;
-        if (this.next == null)
-            return false;
-        return this.next.contains(x);
-    }
-    
     // Affiche la liste entre crochets
     public void show() {
         System.out.print("[");

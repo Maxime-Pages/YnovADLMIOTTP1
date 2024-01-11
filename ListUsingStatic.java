@@ -21,6 +21,14 @@ public class ListUsingStatic {
         return false;
     }
 
+    public Boolean contains(int x) {
+        if (this.content == x)
+            return true;
+        if (this.next == null)
+            return false;
+        return this.next.contains(x);
+    }
+    
     // Suppression de la première occurrence de x
     static ListUsingStatic supprimer(int x, ListUsingStatic a) {
         if (a == null)
@@ -47,14 +55,6 @@ public class ListUsingStatic {
             a = c;
         }
         return b;
-    }
-
-    public Boolean contains(int x) {
-        if (this.content == x)
-            return true;
-        if (this.next == null)
-            return false;
-        return this.next.contains(x);
     }
 
     // Affiche la liste entre crochets
