@@ -53,7 +53,7 @@ public class BTree<T>
 
 	public uint GetHeight()
 	{
-		return uint.Max(left != null ?left.GetHeight() : 0,right != null ? right.GetHeight() : 0);
+		return 1 + uint.Max(left != null ?left.GetHeight() : 0,right != null ? right.GetHeight() : 0);
 	}
 }
 
@@ -62,6 +62,6 @@ public class Exo1
 {
 	public static void Test()
 	{
-		Console.WriteLine("Hello World!");
+		
 	}
 }
