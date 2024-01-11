@@ -49,6 +49,14 @@ public class ListUsingStatic {
         return b;
     }
 
+    public Boolean contains(int x) {
+        if (this.content == x)
+            return true;
+        if (this.next == null)
+            return false;
+        return this.next.contains(x);
+    }
+
     // Affiche la liste entre crochets
     public static void show(ListUsingStatic a) {
         System.out.print("[");
@@ -70,6 +78,8 @@ class Main {
         l1 = ListUsingStatic.append(18, l1);
         l1 = ListUsingStatic.append(25, l1);
         l1.content = 31;
+        ListUsingStatic.show(l1);
+        ListUsingStatic.Anonyme(l1);
         ListUsingStatic.show(l1);
     }
 }

@@ -1,4 +1,3 @@
-
 class Main {
     public static void main(String[] arg) {
         List l1 = new List(5, new List(6, null));
