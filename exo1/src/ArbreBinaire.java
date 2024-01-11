@@ -43,7 +43,7 @@ public class ArbreBinaire {
     }
 
     public boolean contains(Object obj) {
-        if (this.obj == obj) {
+        if (this.obj.equals(obj)) {
             return true;
         } else {
             if (this.gauche != null) {
